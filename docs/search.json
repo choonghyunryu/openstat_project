@@ -6,7 +6,7 @@
       "description": "**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**입니다.\n",
       "author": [],
       "contents": "\n\nContents\n기능적 특징\n다국어 지원\n데이터 분석 보고서 지원\n도움말 및 튜토리얼 지원\n\n구조적 특징\nR & shiny\nServer Hosting & Local Hosting\ndlookr & alookr\n\n\n기능적 특징\n다국어 지원\nBitStat은 메뉴와 메시지 등 UI 레벨에서 한글과 영문을 지원합니다.\n\n\n\n한글 지원 BitStat영문 지원 BitStat데이터 분석 보고서 지원\nBitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.\npdf 포맷 보고서\npdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.\n \nhtml 포맷 보고서\nhtml 포맷 보고서는 동적 컨텐츠를 제공하며, 독립적으로 심층적인 데이터 분석의 수행이 가능합니다.\n \n도움말 및 튜토리얼 지원\nrmarkdown 기반의 도움말과 튜토리얼은 사용자가 데이터 분석을 쉽게 수행할 수 있도록 가이드를 제공합니다.\n구조적 특징\nR & shiny\nR 패키지로 개발되며, shiny 앱으로 UI/UX를 구현하였습니다.\nR 패키지\nR 패키지로 배포가 가능합니다.\nshiny\nshiny 앱을 구성합니다. 프로토타이핑의 Look & Feal은 shinydashboard로 구현되었습니다.\nServer Hosting & Local Hosting\nServer\nBitStat는 데이터 분석 Server로서 클라우드 환경에 배포되어 데이터 분석을 지원합니다.\nDesktop\nBitStat는 사용자 컴퓨터에서 구동되어 데이터 분석 수행을 지원합니다.\ndlookr & alookr\nBitStat는 dlookr, alookr 패키지의 기능을 최적화 하여 지원합니다.\ndlookr\ndlookr 패키지는 데이터 진단, 탐색적 데이터 분석, 통계적 데이터 변환 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.\n\n\n\nalookr\nalookr 패키지는 분석 데이터 분할, 이진 분류 모델 적합 및 모델 검증을 자동화하는 AutoML 기능을 지원합니다.\n\n\n\n\n\n\n",
-      "last_modified": "2021-10-07T08:35:13+09:00"
+      "last_modified": "2021-10-07T08:47:18+09:00"
     },
     {
       "path": "index.html",

@@ -40,7 +40,7 @@ BitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.
 
 pdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.
 
-<a href="img/diag_health_screen.pdf">
+<a href="img/diag_health_screen.pdf" target="_blank">
   <img class="img-concert" src="img/bitstat_report_pdf.jpg" alt="데이터진단 보고서 - pdf 포맷" width="600" height="598"/>
 </a>
 
