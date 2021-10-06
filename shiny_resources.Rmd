@@ -1,0 +1,67 @@
+---
+title: "학습 리소스"
+description: |
+  오픈 통계 패키지인 **BitStat** 개발 참여를 위한 Shiny, HTML, CSS 등에 대한 학습 리소스  
+site: distill::distill_website
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Shiny 학습과 개발을 위한 리소스
+     
+## Shiny 학습을 위한 리소스
+
+* **Shiny 홈페이지 :** 
+     + [https://shiny.rstudio.com/](https://shiny.rstudio.com/){target="_blank"}
+     + 초급자 필수 사이트
+* htmltools 패키지 홈페이지 : 
+     + [https://rstudio.github.io/htmltools/](https://rstudio.github.io/htmltools/){target="_blank"}
+     + shiny 앱에 html tags를 포함하는 기능     
+* shinydashboard 홈페이지 : 
+     + [https://rstudio.github.io/shinydashboard/](https://rstudio.github.io/shinydashboard/){target="_blank"}
+     + 초급자 필수 사이트     
+* Mastering Shiny : 
+     + [https://mastering-shiny.org/](https://mastering-shiny.org/){target="_blank"} 
+     + 중급자 이상
+* Bootstrap : 
+     + [https://getbootstrap.com/](https://getbootstrap.com/){target="_blank"} 
+     + 부트스트랩은 웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JavaScript 프레임워크
+     + Shiny는 내부적으로 Bootstrap와 인터페이스하여 반응형 앱을 구현하는 개발 도구
+
+
+## 초보자를 위한 웹 개발 학습 리소스
+
+* HTML 홈페이지 : 
+     + [http://tcpschool.com/html/intro](http://tcpschool.com/html/intro){target="_blank"}
+     + HTML(HyperText Markup Language)은 웹페이지에 내용을 기술하고 정의하는 데 사용
+     
+* CSS 홈페이지 : 
+     + [http://tcpschool.com/css/intro](http://tcpschool.com/css/intro){target="_blank"}
+     + CSS(Cascading Style Sheets)는 웹페이지 콘텐츠의 모양이나 표현을 기술하는 데 사용  
+     
+* JavaScript 홈페이지 : 
+     + [http://tcpschool.com/javascript/intro](http://tcpschool.com/javascript/intro){target="_blank"}
+     + CSS(Cascading Style Sheets)는 웹페이지 콘텐츠 개발에 사용되는 스크립트 프로그래밍 언어
+     
+## Shiny 개발을 위한 리소스
+* Font Awesome : 
+     + [https://fontawesome.com/](https://fontawesome.com/){target="_blank"}
+     + 앱에 사용할 아이콘 선택을 위한 정보 
+
+
+# BitStat 패키지 개발을 위한 리소스
+
+## BitStat 개발을 위한 리소스
+* dlookr : 
+     + [https://choonghyunryu.github.io/dlookr/](https://choonghyunryu.github.io/dlookr/){target="_blank"}
+     + 데이터 진단, 데이터 변환, 기술통계 기능 구현에 사용되는 R 패키지 
+* alookr : 
+     + [https://choonghyunryu.github.io/alookr/](https://choonghyunryu.github.io/alookr/){target="_blank"}
+     + 샘플링, 이진분류 모델링에 사용할 R 패키지 
+

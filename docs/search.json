@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "BitStat 패키지",
+      "description": "**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**입니다.\n",
+      "author": [],
+      "contents": "\n\nContents\n기능적 특징\n다국어 지원\n데이터 분석 보고서 지원\n도움말 및 튜토리얼 지원\n\n구조적 특징\nR & shiny\nServer Hosting & Local Hosting\ndlookr & alookr\n\n\n기능적 특징\n다국어 지원\nBitStat은 메뉴와 메시지 등 UI 레벨에서 한글과 영문을 지원합니다.\n\n\n\n한글 지원 BitStat영문 지원 BitStat데이터 분석 보고서 지원\nBitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.\npdf 포맷 보고서\npdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.\n \nhtml 포맷 보고서\nhtml 포맷 보고서는 동적 컨텐츠를 제공하며, 독립적으로 심층적인 데이터 분석의 수행이 가능합니다.\n \n도움말 및 튜토리얼 지원\nrmarkdown 기반의 도움말과 튜토리얼은 사용자가 데이터 분석을 쉽게 수행할 수 있도록 가이드를 제공합니다.\n구조적 특징\nR & shiny\nR 패키지로 개발되며, shiny 앱으로 UI/UX를 구현하였습니다.\nR 패키지\nR 패키지로 배포가 가능합니다.\nshiny\nshiny 앱을 구성합니다. 프로토타이핑의 Look & Feal은 shinydashboard로 구현되었습니다.\nServer Hosting & Local Hosting\nServer\nBitStat는 데이터 분석 Server로서 클라우드 환경에 배포되어 데이터 분석을 지원합니다.\nDesktop\nBitStat는 사용자 컴퓨터에서 구동되어 데이터 분석 수행을 지원합니다.\ndlookr & alookr\nBitStat는 dlookr, alookr 패키지의 기능을 최적화 하여 지원합니다.\ndlookr\ndlookr 패키지는 데이터 진단, 탐색적 데이터 분석, 통계적 데이터 변환 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.\n\n\n\nalookr\nalookr 패키지는 분석 데이터 분할, 이진 분류 모델 적합 및 모델 검증을 자동화하는 AutoML 기능을 지원합니다.\n\n\n\n\n\n\n",
+      "last_modified": "2021-10-07T08:35:13+09:00"
+    },
+    {
+      "path": "index.html",
+      "title": "BitStat",
+      "description": "오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다. \n",
+      "author": [],
+      "contents": "\nBitStat 앱\n\nBitStat 패키지\n\n\nBitStat 리파지토리\nGithub : https://github.com/bit2r/BitStat\n\n\n\n",
+      "last_modified": "2021-10-07T08:35:14+09:00"
+    },
+    {
+      "path": "shiny_resources.html",
+      "title": "학습 리소스",
+      "description": "오픈 통계 패키지인 **BitStat** 개발 참여를 위한 Shiny, HTML, CSS 등에 대한 학습 리소스  \n",
+      "author": [],
+      "contents": "\n\nContents\nShiny 학습과 개발을 위한 리소스\nShiny 학습을 위한 리소스\n초보자를 위한 웹 개발 학습 리소스\nShiny 개발을 위한 리소스\n\nBitStat 패키지 개발을 위한 리소스\nBitStat 개발을 위한 리소스\n\n\nShiny 학습과 개발을 위한 리소스\nShiny 학습을 위한 리소스\nShiny 홈페이지 :\nhttps://shiny.rstudio.com/\n초급자 필수 사이트\n\nhtmltools 패키지 홈페이지 :\nhttps://rstudio.github.io/htmltools/\nshiny 앱에 html tags를 포함하는 기능\n\nshinydashboard 홈페이지 :\nhttps://rstudio.github.io/shinydashboard/\n초급자 필수 사이트\n\nMastering Shiny :\nhttps://mastering-shiny.org/\n중급자 이상\n\nBootstrap :\nhttps://getbootstrap.com/\n부트스트랩은 웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JavaScript 프레임워크\nShiny는 내부적으로 Bootstrap와 인터페이스하여 반응형 앱을 구현하는 개발 도구\n\n초보자를 위한 웹 개발 학습 리소스\nHTML 홈페이지 :\nhttp://tcpschool.com/html/intro\nHTML(HyperText Markup Language)은 웹페이지에 내용을 기술하고 정의하는 데 사용\n\nCSS 홈페이지 :\nhttp://tcpschool.com/css/intro\nCSS(Cascading Style Sheets)는 웹페이지 콘텐츠의 모양이나 표현을 기술하는 데 사용\n\nJavaScript 홈페이지 :\nhttp://tcpschool.com/javascript/intro\nCSS(Cascading Style Sheets)는 웹페이지 콘텐츠 개발에 사용되는 스크립트 프로그래밍 언어\n\nShiny 개발을 위한 리소스\nFont Awesome :\nhttps://fontawesome.com/\n앱에 사용할 아이콘 선택을 위한 정보\n\nBitStat 패키지 개발을 위한 리소스\nBitStat 개발을 위한 리소스\ndlookr :\nhttps://choonghyunryu.github.io/dlookr/\n데이터 진단, 데이터 변환, 기술통계 기능 구현에 사용되는 R 패키지\n\nalookr :\nhttps://choonghyunryu.github.io/alookr/\n샘플링, 이진분류 모델링에 사용할 R 패키지\n\n\n\n\n",
+      "last_modified": "2021-10-07T08:35:14+09:00"
+    },
+    {
+      "path": "todo.html",
+      "title": "진행 경과 및 계획",
+      "description": "진행된 내역과 앞으로의(단기) 계획\n",
+      "author": [],
+      "contents": "\n\nContents\n진행 경과\n단기 계획\n협업 방법\n컨트리뷰션 아카데미\n기타 대외 협력\n\n\n진행 경과\n대분류\n중분류\n소분류\n상세 기능\n데이터\n데이터 준비\n데이터 업로드\nCSV 파일\n엑셀 파일\nR 데이터 파일\n\n데이터\n데이터 준비\n데이터 관리\n데이터셋 정보 편집\n데이터셋 삭제\n데이터셋 다운로드\n전체 다운로드\n\n데이터\n데이터 진단\n진단 개요\n데이터 진단 개요\n데이터 진단 상세\n\n데이터\n데이터 진단\n변수별 진단\n개별 변수별 데이터 진단\n\n데이터\n데이터 진단\n이상치\n이상치 진단 분석\n\n데이터\n데이터 진단\n보고서 작성\npdf 보고서 작성\nweb 보고서 작성\n\n데이터\n데이터 변환\n변수 조작\n변수 이름 변경\n변수 형 변환\n변수 삭제\n변수 레벨 순서변경\n변수 레벨 변경/병합\n변수 변환\n변수 비닝\n\n\n단기 계획\n대분류\n중분류\n소분류\n상세 기능\n데이터\n데이터 변환\n데이터 정제\n결측치 제거/대체\n이상치 제거/대체\n중복 관측치 제거\n\n데이터\n데이터 변환\n데이터 분할\nRandom Simple Sampling\nBootstrap Sampling\nHoldout Sampling\n\n기술통계\nEDA\n단변량\n통계량\n시각화\n\n기술통계\nEDA\n이변량\n통계량\n시각화\n\n기술통계\nEDA\n다변량\n통계량\n시각화\n\n회귀분석\n단순선형모형\n모델 적합\n변수선택\n모델 적합\n\n회귀분석\n단순선형모형\n모델 진단\n모델 진단\n\n회귀분석\n단순선형모형\n예측\n예측\n\n\n협업 방법\n컨트리뷰션 아카데미\n컨트리뷰션 아카데미에서 BitStat의 일부를 구현합니다.\n멘티들이 기여할 수 있는 작업들\nkodlookr 패키지 구현\nkodlookr 패키지는 dlookr 패키지의 한글 도움말 패키지로, dlookr 패키지의 함수 도움말과 Vignettes(소품) 한글화\nkodlookr 패키지는 BitStat의 데이터 진단, 탐색적 데이터 분석, 데이터 변환 작업 수행의 도움말 리소스로 활용\n\nBitStat 한글 메뉴 및 메시지의 영문화 작업을 수행한다.\ni18n 구현을 위한 영문 번역\n\nBitStat 도움말을 작성\n기 구현 영역 및 10/11월 중 구현한 기능 범위\n1차로 한글 도움말에 한정하여 작성\n\n개발 산출물 정리 및 표준화\n명명규칙에 맞게 변수 목록 표준화\n산출물의 오탈자 수정\n\nBitStat에 구현할 기능 중 심플하고 난이도 낮은 기능 개발\nshiny 앱 개발 및 아키텍쳐 이해를 위한 경험 제공을 위한 활동으로\n개인의 역량을 고려하여 배분 및 진행\n\n기타 대외 협력\n현 시점 기준, 계획 없음\n\n\n\n",
+      "last_modified": "2021-10-07T08:35:15+09:00"
+    }
+  ],
+  "collections": []
+}
