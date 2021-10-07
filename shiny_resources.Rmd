@@ -1,7 +1,7 @@
 ---
 title: "학습 리소스"
 description: |
-  오픈 통계 패키지인 **BitStat** 개발 참여를 위한 Shiny, HTML, CSS 등에 대한 학습 리소스  
+  **BitStat** 개발 참여를 위한 Shiny, HTML, CSS 등에 대한 학습 리소스  
 site: distill::distill_website
 output:
   distill::distill_article:

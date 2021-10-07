@@ -13,11 +13,20 @@ navbar:
       href: todo.html
     - text: "Shiny Hands-on"
       menu:
-        - text: "Resources"
+        - text: "Shiny 아키텍처 이해"
+          href: introduce_shiny.html
+        - text: "사용자 인터페이스 만들기"
+          href: userinterface.html   
+        - text: "위젯 추가하기"
+          href: control-widget.html 
+        - text: "반응 출력"
+          href: reactivity.html           
+        - text: "---"
+        - text: "BitStat 개발하기"
           href: shiny_resources.html
         - text: "---"
-        - text: "Article Metadata"
-          href: todo.html
+        - text: "Resources"        
+          href: shiny_resources.html
     - icon: fab fa-github
       href: https://github.com/bit2r/BitStat         
 output: 

@@ -85,29 +85,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>BitStat: BitStat 패키지</title>
+  <title>BitStat: 위젯 추가하기</title>
 
-  <meta property="description" itemprop="description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="description" itemprop="description" content="위젯을 이해한다. **입력 위젯**을 패널에 추가하는 방법을 숙지하자."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="BitStat: BitStat 패키지"/>
+  <meta property="og:title" content="BitStat: 위젯 추가하기"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="og:description" content="위젯을 이해한다. **입력 위젯**을 패널에 추가하는 방법을 숙지하자."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="BitStat"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="BitStat: BitStat 패키지"/>
-  <meta property="twitter:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="twitter:title" content="BitStat: 위젯 추가하기"/>
+  <meta property="twitter:description" content="위젯을 이해한다. **입력 위젯**을 패널에 추가하는 방법을 숙지하자."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["BitStat 패키지"]},{"type":"character","attributes":{},"value":["**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["위젯 추가하기"]},{"type":"character","attributes":{},"value":["위젯을 이해한다. **입력 위젯**을 패널에 추가하는 방법을 숙지하자.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2405,7 +2405,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"BitStat 패키지","description":"**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**","authors":[]}
+{"title":"위젯 추가하기","description":"위젯을 이해한다. **입력 위젯**을 패널에 추가하는 방법을 숙지하자.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2448,10 +2448,10 @@ Shiny Hands-on
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>BitStat 패키지</h1>
+<h1>위젯 추가하기</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p><strong>BitStat</strong>는 <strong>R 패키지</strong>로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 <strong>shiny 앱</strong></p></p>
+<p><p>위젯을 이해한다. <strong>입력 위젯</strong>을 패널에 추가하는 방법을 숙지하자.</p></p>
 </div>
 
 
@@ -2460,68 +2460,144 @@ Shiny Hands-on
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#기능적-특징">기능적 특징</a>
+<li><a href="#위젯을-아시나요">위젯을 아시나요?</a>
 <ul>
-<li><a href="#다국어-지원">다국어 지원</a></li>
-<li><a href="#데이터-분석-보고서-지원">데이터 분석 보고서 지원</a></li>
-<li><a href="#도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</a></li>
+<li><a href="#입력-위젯">입력 위젯</a></li>
 </ul></li>
-<li><a href="#구조적-특징">구조적 특징</a>
+<li><a href="#위젯을-추가한-예제">위젯을 추가한 예제</a></li>
+<li><a href="#tutorial">tutorial</a>
 <ul>
-<li><a href="#r-shiny">R &amp; shiny</a></li>
-<li><a href="#server-hosting-local-hosting">Server Hosting &amp; Local Hosting</a></li>
-<li><a href="#dlookr-alookr">dlookr &amp; alookr</a></li>
+<li><a href="#입력-위젯-완성하기-tutorial">입력 위젯 완성하기 tutorial</a></li>
+<li><a href="#shiny-공식-tutorial-페이지">Shiny 공식 tutorial 페이지</a></li>
+<li><a href="#추가-예제-실행해-보기">추가 예제 실행해 보기</a></li>
 </ul></li>
 </ul>
 </nav>
 </div>
-<h1 id="기능적-특징">기능적 특징</h1>
-<h2 id="다국어-지원">다국어 지원</h2>
-<p>BitStat은 메뉴와 메시지 등 UI 레벨에서 한글과 영문을 지원합니다.</p>
+<h1 id="위젯을-아시나요">위젯을 아시나요?</h1>
+<p>“위젯(widget)은 컴퓨터 프로그래밍에서 위젯(widget) 또는 컨트롤(control)은 컴퓨터 사용자가 상호 작용하는 인터페이스 요소입니다.” - <a href="https://ko.wikipedia.org/wiki/GUI_위젯" class="uri">https://ko.wikipedia.org/wiki/GUI_위젯</a> 중에서</p>
+<h2 id="입력-위젯">입력 위젯</h2>
+<p>Shiny에서는 입력 위젯을 컨트롯 위젯(control widgets)이라 부릅니다. 즉, 위젯을 통해서 앱을 컨트롤하기 때문입니다. 굳이 입력 위젯이라고 불렀던 것은 입력된 값을 통해서 기능이 컨트록되고, 중요한 대부분 컨트롤 위젯의 이름의 접미사가 “Input”이기 때문입니다.</p>
+<p>shiny 패키지의 입력 위젯은 버튼을 포함해서 다음과 같은 종류가 있습니다.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://shiny.rstudio.com/'>shiny</a></span><span class='op'>)</span>
 
+<span class='fu'><a href='https://rdrr.io/r/base/sets.html'>setdiff</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sets.html'>union</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ls.html'>ls</a></span><span class='op'>(</span>pos <span class='op'>=</span> <span class='st'>"package:shiny"</span>, pattern <span class='op'>=</span> <span class='st'>"Input$"</span><span class='op'>)</span>, 
+      <span class='fu'><a href='https://rdrr.io/r/base/ls.html'>ls</a></span><span class='op'>(</span>pos <span class='op'>=</span> <span class='st'>"package:shiny"</span>, pattern <span class='op'>=</span> <span class='st'>"Button$"</span><span class='op'>)</span><span class='op'>)</span>,
+      <span class='fu'><a href='https://rdrr.io/r/base/ls.html'>ls</a></span><span class='op'>(</span>pos <span class='op'>=</span> <span class='st'>"package:shiny"</span>, pattern <span class='op'>=</span> <span class='st'>"^update"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
 </div>
+<pre><code> [1] &quot;checkboxGroupInput&quot;      &quot;checkboxInput&quot;          
+ [3] &quot;dateInput&quot;               &quot;dateRangeInput&quot;         
+ [5] &quot;fileInput&quot;               &quot;numericInput&quot;           
+ [7] &quot;passwordInput&quot;           &quot;restoreInput&quot;           
+ [9] &quot;selectInput&quot;             &quot;selectizeInput&quot;         
+[11] &quot;sliderInput&quot;             &quot;snapshotPreprocessInput&quot;
+[13] &quot;textAreaInput&quot;           &quot;textInput&quot;              
+[15] &quot;varSelectInput&quot;          &quot;varSelectizeInput&quot;      
+[17] &quot;actionButton&quot;            &quot;bookmarkButton&quot;         
+[19] &quot;downloadButton&quot;          &quot;modalButton&quot;            
+[21] &quot;submitButton&quot;           </code></pre>
+</div>
+<p>기본 입력 위젯은 다음 그림과 같습니다.</p>
 <figure>
-<img src="img/bitstat_kor.jpg" alt="한글 지원 BitStat" /><figcaption aria-hidden="true">한글 지원 BitStat</figcaption>
+<img src="img/basic-widgets.png" alt="기본 입력 위젯" /><figcaption aria-hidden="true">기본 입력 위젯</figcaption>
 </figure>
+<h1 id="위젯을-추가한-예제">위젯을 추가한 예제</h1>
+<p>다음 예제는 레이아웃과 패널에 입력 위젯을 출력한 예제입니다.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/titlePanel.html'>titlePanel</a></span><span class='op'>(</span><span class='st'>"censusVis"</span><span class='op'>)</span>,
+  
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarLayout</a></span><span class='op'>(</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarPanel</a></span><span class='op'>(</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/helpText.html'>helpText</a></span><span class='op'>(</span><span class='st'>"Create demographic maps with 
+               information from the 2010 US Census."</span><span class='op'>)</span>,
+      
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span><span class='op'>(</span><span class='st'>"var"</span>, 
+                  label <span class='op'>=</span> <span class='st'>"Choose a variable to display"</span>,
+                  choices <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='st'>"Percent White"</span>, 
+                                 <span class='st'>"Percent Black"</span>,
+                                 <span class='st'>"Percent Hispanic"</span>, 
+                                 <span class='st'>"Percent Asian"</span><span class='op'>)</span>,
+                  selected <span class='op'>=</span> <span class='st'>"Percent White"</span><span class='op'>)</span>,
+      
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sliderInput.html'>sliderInput</a></span><span class='op'>(</span><span class='st'>"range"</span>, 
+                  label <span class='op'>=</span> <span class='st'>"Range of interest:"</span>,
+                  min <span class='op'>=</span> <span class='fl'>0</span>, max <span class='op'>=</span> <span class='fl'>100</span>, value <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='op'>)</span>,
+    
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>mainPanel</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>위의 예제의 결과는 다음과 같습니다.</p>
 <figure>
-<img src="img/bitstat_eng.jpg" alt="영문 지원 BitStat" /><figcaption aria-hidden="true">영문 지원 BitStat</figcaption>
+<img src="img/censusviz.png" alt="입력 위젯들" /><figcaption aria-hidden="true">입력 위젯들</figcaption>
 </figure>
-<h2 id="데이터-분석-보고서-지원">데이터 분석 보고서 지원</h2>
-<p>BitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.</p>
-<h3 id="pdf-포맷-보고서">pdf 포맷 보고서</h3>
-<p>pdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.</p>
-<p><a href="img/diag_health_screen.pdf" target="_blank"> <img class="img-concert" src="img/bitstat_report_pdf.jpg" alt="데이터진단 보고서 - pdf 포맷" width="600" height="598"/> </a></p>
-<h3 id="html-포맷-보고서">html 포맷 보고서</h3>
-<p>html 포맷 보고서는 동적 컨텐츠를 제공하며, 독립적으로 심층적인 데이터 분석의 수행이 가능합니다.</p>
-<p><a href="img/diag_health_screen.html" target="_blank"> <img class="img-concert" src="img/bitstat_report_web.jpg" alt="데이터진단 보고서 - html 포맷" width="600" height="417"/> </a></p>
-<h2 id="도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</h2>
-<p>rmarkdown 기반의 도움말과 튜토리얼은 사용자가 데이터 분석을 쉽게 수행할 수 있도록 가이드를 제공합니다.</p>
-<h1 id="구조적-특징">구조적 특징</h1>
-<h2 id="r-shiny">R &amp; shiny</h2>
-<p>R 패키지로 개발되며, shiny 앱으로 UI/UX를 구현하였습니다.</p>
-<h3 id="r-패키지">R 패키지</h3>
-<p>R 패키지로 배포가 가능합니다.</p>
-<h3 id="shiny">shiny</h3>
-<p>shiny 앱을 구성합니다. 프로토타이핑의 Look &amp; Feal은 shinydashboard로 구현되었습니다.</p>
-<h2 id="server-hosting-local-hosting">Server Hosting &amp; Local Hosting</h2>
-<h3 id="server">Server</h3>
-<p>BitStat는 데이터 분석 Server로서 클라우드 환경에 배포되어 데이터 분석을 지원합니다.</p>
-<h3 id="desktop">Desktop</h3>
-<p>BitStat는 사용자 컴퓨터에서 구동되어 데이터 분석 수행을 지원합니다.</p>
-<h2 id="dlookr-alookr">dlookr &amp; alookr</h2>
-<p>BitStat는 dlookr, alookr 패키지의 기능을 최적화 하여 지원합니다.</p>
-<h3 id="dlookr">dlookr</h3>
-<p>dlookr 패키지는 데이터 진단, 탐색적 데이터 분석, 통계적 데이터 변환 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.</p>
+<p>그리고 위 그림에서 selectInput은 이름처럼 여러 값 중에서 하나의 값을 선택하는 입력 위젯입니다. 다음처럼 마우스를 올려 놓으면 네 개의 값이 출력되고, 사용자는 하나의 값을 선택하면 됩니다.</p>
+<figure>
+<img src="img/select-box.png" alt="selectInput 위젯" /><figcaption aria-hidden="true">selectInput 위젯</figcaption>
+</figure>
+<h1 id="tutorial">tutorial</h1>
+<h2 id="입력-위젯-완성하기-tutorial">입력 위젯 완성하기 tutorial</h2>
+<p>다음 코드를 입력한 후, app.R이라는 이름의 파일로 저장하고 실행해 보세요. 완성된 입력 위젯의 기능을 확인할 수 있습니다. 여러분은 UI 파트를 완성하였습니다.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/dlookr.png" width="10%" /></p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://shiny.rstudio.com/'>shiny</a></span><span class='op'>)</span>
+
+<span class='co'># Define UI ----</span>
+<span class='va'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/titlePanel.html'>titlePanel</a></span><span class='op'>(</span><span class='st'>"censusVis"</span><span class='op'>)</span>,
+  
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarLayout</a></span><span class='op'>(</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarPanel</a></span><span class='op'>(</span>
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/helpText.html'>helpText</a></span><span class='op'>(</span><span class='st'>"Create demographic maps with 
+               information from the 2010 US Census."</span><span class='op'>)</span>,
+      
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span><span class='op'>(</span><span class='st'>"var"</span>, 
+                  label <span class='op'>=</span> <span class='st'>"Choose a variable to display"</span>,
+                  choices <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='st'>"Percent White"</span>, 
+                                 <span class='st'>"Percent Black"</span>,
+                                 <span class='st'>"Percent Hispanic"</span>, 
+                                 <span class='st'>"Percent Asian"</span><span class='op'>)</span>,
+                  selected <span class='op'>=</span> <span class='st'>"Percent White"</span><span class='op'>)</span>,
+      
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sliderInput.html'>sliderInput</a></span><span class='op'>(</span><span class='st'>"range"</span>, 
+                  label <span class='op'>=</span> <span class='st'>"Range of interest:"</span>,
+                  min <span class='op'>=</span> <span class='fl'>0</span>, max <span class='op'>=</span> <span class='fl'>100</span>, value <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='op'>)</span>,
+    
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>mainPanel</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='co'># Define server logic ----</span>
+<span class='va'>server</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>output</span><span class='op'>)</span> <span class='op'>{</span>
+  
+<span class='op'>}</span>
+
+<span class='co'># Run the app ----</span>
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span><span class='op'>(</span>ui <span class='op'>=</span> <span class='va'>ui</span>, server <span class='op'>=</span> <span class='va'>server</span><span class='op'>)</span>
+</code></pre>
 </div>
-<h3 id="alookr">alookr</h3>
-<p>alookr 패키지는 분석 데이터 분할, 이진 분류 모델 적합 및 모델 검증을 자동화하는 AutoML 기능을 지원합니다.</p>
+</div>
+<h2 id="shiny-공식-tutorial-페이지">Shiny 공식 tutorial 페이지</h2>
+<p>Shiny 공식 tutorial 페이지를 살펴보고, 입력 위젯의 종류와 설정하는 방법을 이해하세요.</p>
+<p><a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/" target="_blank">https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/</a></p>
+<h2 id="추가-예제-실행해-보기">추가 예제 실행해 보기</h2>
+<p>예제를 실행시켜 보고, 다양한 입력 위젯과 출력 위젯을 경험해 보세요.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/alookr.png" width="10%" /></p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span> <span class='op'>(</span><span class='st'>"07_widgets"</span><span class='op'>)</span>
+</code></pre>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -85,29 +85,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>BitStat: BitStat 패키지</title>
+  <title>BitStat: Shiny 아키텍처 이해</title>
 
-  <meta property="description" itemprop="description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="description" itemprop="description" content="Shiny 아키텍처를 이해한다. **UI**, **server**, **입력 위젯(input widget)**, **출력 위젯(output widget)**, **렌더링(Rendering)** 정도는 숙지하자."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="BitStat: BitStat 패키지"/>
+  <meta property="og:title" content="BitStat: Shiny 아키텍처 이해"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="og:description" content="Shiny 아키텍처를 이해한다. **UI**, **server**, **입력 위젯(input widget)**, **출력 위젯(output widget)**, **렌더링(Rendering)** 정도는 숙지하자."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="BitStat"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="BitStat: BitStat 패키지"/>
-  <meta property="twitter:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="twitter:title" content="BitStat: Shiny 아키텍처 이해"/>
+  <meta property="twitter:description" content="Shiny 아키텍처를 이해한다. **UI**, **server**, **입력 위젯(input widget)**, **출력 위젯(output widget)**, **렌더링(Rendering)** 정도는 숙지하자."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["BitStat 패키지"]},{"type":"character","attributes":{},"value":["**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["Shiny 아키텍처 이해"]},{"type":"character","attributes":{},"value":["Shiny 아키텍처를 이해한다. **UI**, **server**, **입력 위젯(input widget)**, **출력 위젯(output widget)**, **렌더링(Rendering)** 정도는 숙지하자.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2405,7 +2405,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"BitStat 패키지","description":"**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**","authors":[]}
+{"title":"Shiny 아키텍처 이해","description":"Shiny 아키텍처를 이해한다. **UI**, **server**, **입력 위젯(input widget)**, **출력 위젯(output widget)**, **렌더링(Rendering)** 정도는 숙지하자.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2448,10 +2448,10 @@ Shiny Hands-on
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>BitStat 패키지</h1>
+<h1>Shiny 아키텍처 이해</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p><strong>BitStat</strong>는 <strong>R 패키지</strong>로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 <strong>shiny 앱</strong></p></p>
+<p><p>Shiny 아키텍처를 이해한다. <strong>UI</strong>, <strong>server</strong>, <strong>입력 위젯(input widget)</strong>, <strong>출력 위젯(output widget)</strong>, <strong>렌더링(Rendering)</strong> 정도는 숙지하자.</p></p>
 </div>
 
 
@@ -2460,67 +2460,140 @@ Shiny Hands-on
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#기능적-특징">기능적 특징</a>
+<li><a href="#shiny-아키텍처">Shiny 아키텍처</a>
 <ul>
-<li><a href="#다국어-지원">다국어 지원</a></li>
-<li><a href="#데이터-분석-보고서-지원">데이터 분석 보고서 지원</a></li>
-<li><a href="#도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</a></li>
+<li><a href="#ui와-server의-상호작용">UI와 Server의 상호작용</a></li>
+<li><a href="#ui와-server의-상호작용-예시">UI와 server의 상호작용 예시</a></li>
+<li><a href="#ui와-server의-상호작용-표준화">UI와 server의 상호작용 표준화</a></li>
 </ul></li>
-<li><a href="#구조적-특징">구조적 특징</a>
+<li><a href="#shiny-첫-예제">Shiny 첫 예제</a>
 <ul>
-<li><a href="#r-shiny">R &amp; shiny</a></li>
-<li><a href="#server-hosting-local-hosting">Server Hosting &amp; Local Hosting</a></li>
-<li><a href="#dlookr-alookr">dlookr &amp; alookr</a></li>
+<li><a href="#히스토그램-그리기-예제">히스토그램 그리기 예제</a></li>
+<li><a href="#예제-실행해-보기">예제 실행해 보기</a></li>
+</ul></li>
+<li><a href="#tutorial">tutorial</a>
+<ul>
+<li><a href="#shiny-공식-tutorial-페이지">Shiny 공식 tutorial 페이지</a></li>
 </ul></li>
 </ul>
 </nav>
 </div>
-<h1 id="기능적-특징">기능적 특징</h1>
-<h2 id="다국어-지원">다국어 지원</h2>
-<p>BitStat은 메뉴와 메시지 등 UI 레벨에서 한글과 영문을 지원합니다.</p>
+<h1 id="shiny-아키텍처">Shiny 아키텍처</h1>
+<h2 id="ui와-server의-상호작용">UI와 Server의 상호작용</h2>
+<figure>
+<img src="img/interaction.png" alt="UI와 Server의 상호작용" /><figcaption aria-hidden="true">UI와 Server의 상호작용</figcaption>
+</figure>
+<ul>
+<li>UI : 사용자 인터페이스(User Interface) 영역으로 <strong>입력 위젯(input widget)을 통해 사용자가 의도하는 파라미터(인수)를 server에 전달</strong>한다.</li>
+<li>server : <strong>입력 위젯의 변화를 감지</strong>하여, 미리 정의된 작업을 수행한 후 그 <strong>결과를 출력 위젯(output widget)에 렌더링하여(rendering)</strong> 사용자에게 전달한다.</li>
+</ul>
+<h2 id="ui와-server의-상호작용-예시">UI와 server의 상호작용 예시</h2>
+<figure>
+<img src="img/flow_interaction.png" alt="UI와 Server의 상호작용 예시" /><figcaption aria-hidden="true">UI와 Server의 상호작용 예시</figcaption>
+</figure>
+<ul>
+<li>sliderInput 위젯은 사용자 입력을 기다리고,
+<ul>
+<li>입력 위젯(input widget)은 사용자의 입력을 대기</li>
+</ul></li>
+<li>입력을 인지한 후, sliderInput 위젯과 연결된 renderPlot() 함수를 호출
+<ul>
+<li>위젯이 변경되면 변경된 위젯이 포함된 렌더링 함수가 자동 호출된다.</li>
+</ul></li>
+<li>renderPlot() 함수는 sliderInput 위젯 값만큼의 막대가 포함된 히스토그램을 그리고,
+<ul>
+<li>렌더링 함수가 실행된다.</li>
+</ul></li>
+<li>히스토그램은 출력 위젯(Output widget)인 plotOutput에 렌더링(그려짐)됨
+<ul>
+<li>출력 위젯에 렌더링된 결과가 반영된다.</li>
+</ul></li>
+</ul>
+<h2 id="ui와-server의-상호작용-표준화">UI와 server의 상호작용 표준화</h2>
+<p>UI와 server의 상호작용을 shiny 스크립트 관점에서 표준화해 보자.</p>
+<ol type="1">
+<li>위젯들은 개별 위젯을 인식하도록 아이디를 부여해야 한다.
+<ul>
+<li>입력 위젯은 outputId,</li>
+<li>출력 위젯은 inputID</li>
+</ul></li>
+<li>입력 위젯의 이름은 <strong>“기능명 + Input”</strong> 포맷으로 정의된다.
+<ul>
+<li>sliderInput = slider + <strong>Input</strong>,</li>
+<li>즉, 슬라이더로 사용자 <strong>입력</strong>을 받아서 서버로 전달하는 위젯</li>
+</ul></li>
+<li>출력 위젯의 이름은 <strong>“기능명 + Output”</strong> 포맷으로 정의된다.
+<ul>
+<li>plotOutput = plot + <strong>Output</strong>,</li>
+<li>즉, 시각화된 R 플롯을 <strong>출력</strong>하는 위젯</li>
+</ul></li>
+<li>렌더링 함수 이름은 <strong>“render + 기능명”</strong> 포맷으로 정의된다.
+<ul>
+<li>renderPlot = <strong>render</strong> + Plot,</li>
+<li>즉, 플롯으로 렌더링하는(플롯을 그리는) 함수</li>
+</ul></li>
+</ol>
+<h1 id="shiny-첫-예제">Shiny 첫 예제</h1>
+<h2 id="히스토그램-그리기-예제">히스토그램 그리기 예제</h2>
+<p>UI와 Server의 상호작용 예시를 구현한 shiny 프로그램은 다음과 같습니다.</p>
+<p>눈으로 한번 쭉 훑어보세요. 이해할 것 같으면서도 어려운 겁니다.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://shiny.rstudio.com/'>shiny</a></span><span class='op'>)</span>
 
+<span class='co'># Define UI for application that draws a histogram</span>
+<span class='va'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span><span class='op'>(</span>
+
+    <span class='co'># Application title</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/titlePanel.html'>titlePanel</a></span><span class='op'>(</span><span class='st'>"Old Faithful Geyser Data"</span><span class='op'>)</span>,
+
+    <span class='co'># Sidebar with a slider input for number of bins </span>
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarLayout</a></span><span class='op'>(</span>
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarPanel</a></span><span class='op'>(</span>
+            <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sliderInput.html'>sliderInput</a></span><span class='op'>(</span><span class='st'>"bins"</span>,
+                        <span class='st'>"Number of bins:"</span>,
+                        min <span class='op'>=</span> <span class='fl'>1</span>,
+                        max <span class='op'>=</span> <span class='fl'>50</span>,
+                        value <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
+        <span class='op'>)</span>,
+
+        <span class='co'># Show a plot of the generated distribution</span>
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>mainPanel</a></span><span class='op'>(</span>
+           <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/plotOutput.html'>plotOutput</a></span><span class='op'>(</span><span class='st'>"distPlot"</span><span class='op'>)</span>
+        <span class='op'>)</span>
+    <span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='co'># Define server logic required to draw a histogram</span>
+<span class='va'>server</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>output</span><span class='op'>)</span> <span class='op'>{</span>
+
+    <span class='va'>output</span><span class='op'>$</span><span class='va'>distPlot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/renderPlot.html'>renderPlot</a></span><span class='op'>(</span><span class='op'>{</span>
+        <span class='co'># generate bins based on input$bins from ui.R</span>
+        <span class='va'>x</span>    <span class='op'>&lt;-</span> <span class='va'>faithful</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span>
+        <span class='va'>bins</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>, length.out <span class='op'>=</span> <span class='va'>input</span><span class='op'>$</span><span class='va'>bins</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>)</span>
+
+        <span class='co'># draw the histogram with the specified number of bins</span>
+        <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>x</span>, breaks <span class='op'>=</span> <span class='va'>bins</span>, col <span class='op'>=</span> <span class='st'>'darkgray'</span>, border <span class='op'>=</span> <span class='st'>'white'</span><span class='op'>)</span>
+    <span class='op'>}</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+<span class='co'># Run the application </span>
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span><span class='op'>(</span>ui <span class='op'>=</span> <span class='va'>ui</span>, server <span class='op'>=</span> <span class='va'>server</span><span class='op'>)</span>
+</code></pre>
 </div>
-<figure>
-<img src="img/bitstat_kor.jpg" alt="한글 지원 BitStat" /><figcaption aria-hidden="true">한글 지원 BitStat</figcaption>
-</figure>
-<figure>
-<img src="img/bitstat_eng.jpg" alt="영문 지원 BitStat" /><figcaption aria-hidden="true">영문 지원 BitStat</figcaption>
-</figure>
-<h2 id="데이터-분석-보고서-지원">데이터 분석 보고서 지원</h2>
-<p>BitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.</p>
-<h3 id="pdf-포맷-보고서">pdf 포맷 보고서</h3>
-<p>pdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.</p>
-<p><a href="img/diag_health_screen.pdf" target="_blank"> <img class="img-concert" src="img/bitstat_report_pdf.jpg" alt="데이터진단 보고서 - pdf 포맷" width="600" height="598"/> </a></p>
-<h3 id="html-포맷-보고서">html 포맷 보고서</h3>
-<p>html 포맷 보고서는 동적 컨텐츠를 제공하며, 독립적으로 심층적인 데이터 분석의 수행이 가능합니다.</p>
-<p><a href="img/diag_health_screen.html" target="_blank"> <img class="img-concert" src="img/bitstat_report_web.jpg" alt="데이터진단 보고서 - html 포맷" width="600" height="417"/> </a></p>
-<h2 id="도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</h2>
-<p>rmarkdown 기반의 도움말과 튜토리얼은 사용자가 데이터 분석을 쉽게 수행할 수 있도록 가이드를 제공합니다.</p>
-<h1 id="구조적-특징">구조적 특징</h1>
-<h2 id="r-shiny">R &amp; shiny</h2>
-<p>R 패키지로 개발되며, shiny 앱으로 UI/UX를 구현하였습니다.</p>
-<h3 id="r-패키지">R 패키지</h3>
-<p>R 패키지로 배포가 가능합니다.</p>
-<h3 id="shiny">shiny</h3>
-<p>shiny 앱을 구성합니다. 프로토타이핑의 Look &amp; Feal은 shinydashboard로 구현되었습니다.</p>
-<h2 id="server-hosting-local-hosting">Server Hosting &amp; Local Hosting</h2>
-<h3 id="server">Server</h3>
-<p>BitStat는 데이터 분석 Server로서 클라우드 환경에 배포되어 데이터 분석을 지원합니다.</p>
-<h3 id="desktop">Desktop</h3>
-<p>BitStat는 사용자 컴퓨터에서 구동되어 데이터 분석 수행을 지원합니다.</p>
-<h2 id="dlookr-alookr">dlookr &amp; alookr</h2>
-<p>BitStat는 dlookr, alookr 패키지의 기능을 최적화 하여 지원합니다.</p>
-<h3 id="dlookr">dlookr</h3>
-<p>dlookr 패키지는 데이터 진단, 탐색적 데이터 분석, 통계적 데이터 변환 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.</p>
+</div>
+<h2 id="예제-실행해-보기">예제 실행해 보기</h2>
+<p>아키텍처를 이해하려는 목적으로 결과를 보고 프로그램도 살펴 보세요.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/dlookr.png" width="10%" /></p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span> <span class='op'>(</span><span class='st'>"01_hello"</span><span class='op'>)</span>
+</code></pre>
 </div>
-<h3 id="alookr">alookr</h3>
-<p>alookr 패키지는 분석 데이터 분할, 이진 분류 모델 적합 및 모델 검증을 자동화하는 AutoML 기능을 지원합니다.</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="img/alookr.png" width="10%" /></p>
 </div>
+<h1 id="tutorial">tutorial</h1>
+<h2 id="shiny-공식-tutorial-페이지">Shiny 공식 tutorial 페이지</h2>
+<p>Shiny 공식 tutorial 페이지를 살펴보고, 앱을 실행시키는 방법을 숙지하세요.</p>
+<p><a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/" target="_blank">https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

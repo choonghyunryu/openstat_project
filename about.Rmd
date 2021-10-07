@@ -1,7 +1,7 @@
 ---
 title: "BitStat 패키지"
 description: |
-  **BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**입니다.
+  **BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**
 site: distill::distill_website
 output:
   distill::distill_article:
