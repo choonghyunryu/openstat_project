@@ -91,7 +91,7 @@ dlookr 패키지는 **데이터 진단**, **탐색적 데이터 분석**, **통�
 ```{r dlookr, echo=FALSE, out.width = "10%"}
 knitr::include_graphics("img/dlookr.png")
 ```
-
+[https://choonghyunryu.github.io/dlookr/](https://choonghyunryu.github.io/dlookr/){target="_blank"}
 
 ### alookr
 alookr 패키지는 분석 데이터 분할, **이진 분류 모델 적합 및 모델 검증**을 자동화하는 **AutoML 기능을 지원**합니다.
@@ -102,4 +102,5 @@ alookr 패키지는 분석 데이터 분할, **이진 분류 모델 적합 및 �
 knitr::include_graphics("img/alookr.png")
 ```
 
+[https://choonghyunryu.github.io/alookr/](https://choonghyunryu.github.io/alookr/){target="_blank"}
 
