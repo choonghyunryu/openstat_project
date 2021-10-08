@@ -87,27 +87,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>BitStat: BitStat 패키지</title>
 
-  <meta property="description" itemprop="description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="description" itemprop="description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 웹앱**"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="BitStat: BitStat 패키지"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="og:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 웹앱**"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="BitStat"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="BitStat: BitStat 패키지"/>
-  <meta property="twitter:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**"/>
+  <meta property="twitter:description" content="**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 웹앱**"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["BitStat 패키지"]},{"type":"character","attributes":{},"value":["**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","output"]}},"value":[{"type":"character","attributes":{},"value":["BitStat 패키지"]},{"type":"character","attributes":{},"value":["**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 웹앱**\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2405,7 +2434,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"BitStat 패키지","description":"**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 앱**","authors":[]}
+{"title":"BitStat 패키지","description":"**BitStat**는 **R 패키지**로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 **shiny 웹앱**","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2451,7 +2481,7 @@ Shiny Hands-on
 <h1>BitStat 패키지</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p><strong>BitStat</strong>는 <strong>R 패키지</strong>로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 <strong>shiny 앱</strong></p></p>
+<p><p><strong>BitStat</strong>는 <strong>R 패키지</strong>로, 통계 기반의 데이터 분석을 UI/UX로 지원하는 <strong>shiny 웹앱</strong></p></p>
 </div>
 
 
@@ -2462,7 +2492,7 @@ Shiny Hands-on
 <ul>
 <li><a href="#기능적-특징">기능적 특징</a>
 <ul>
-<li><a href="#다국어-지원">다국어 지원</a></li>
+<li><a href="#다국어-지원-i18n">다국어 지원 (i18n)</a></li>
 <li><a href="#데이터-분석-보고서-지원">데이터 분석 보고서 지원</a></li>
 <li><a href="#도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</a></li>
 </ul></li>
@@ -2476,7 +2506,7 @@ Shiny Hands-on
 </nav>
 </div>
 <h1 id="기능적-특징">기능적 특징</h1>
-<h2 id="다국어-지원">다국어 지원</h2>
+<h2 id="다국어-지원-i18n">다국어 지원 (i18n)</h2>
 <p>BitStat은 메뉴와 메시지 등 UI 레벨에서 한글과 영문을 지원합니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 
@@ -2488,22 +2518,22 @@ Shiny Hands-on
 <img src="img/bitstat_eng.jpg" alt="영문 지원 BitStat" /><figcaption aria-hidden="true">영문 지원 BitStat</figcaption>
 </figure>
 <h2 id="데이터-분석-보고서-지원">데이터 분석 보고서 지원</h2>
-<p>BitStat은 pdf와 html 포멧의 각종 보고서 작성을 지원합니다.</p>
-<h3 id="pdf-포맷-보고서">pdf 포맷 보고서</h3>
-<p>pdf 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.</p>
-<p><a href="img/diag_health_screen.pdf" target="_blank"> <img class="img-concert" src="img/bitstat_report_pdf.jpg" alt="데이터진단 보고서 - pdf 포맷" width="600" height="598"/> </a></p>
-<h3 id="html-포맷-보고서">html 포맷 보고서</h3>
+<p>BitStat은 PDF와 HTML 포맷의 각종 보고서 작성을 지원합니다.</p>
+<h3 id="pdf-포맷-보고서">PDF 포맷 보고서</h3>
+<p>PDF 포맷 보고서는 정적 컨텐츠를 제공하며, 데이터 분석 프로젝트의 산출물로 활용이 가능합니다.</p>
+<p><a href="img/diag_health_screen.pdf" target="_blank"> <img class="img-concert" src="img/bitstat_report_pdf.jpg" alt="데이터진단 보고서 - PDF 포맷" width="600" height="598"/> </a></p>
+<h3 id="html-포맷-보고서">HTML 포맷 보고서</h3>
 <p>html 포맷 보고서는 동적 컨텐츠를 제공하며, 독립적으로 심층적인 데이터 분석의 수행이 가능합니다.</p>
-<p><a href="img/diag_health_screen.html" target="_blank"> <img class="img-concert" src="img/bitstat_report_web.jpg" alt="데이터진단 보고서 - html 포맷" width="600" height="417"/> </a></p>
+<p><a href="img/diag_health_screen.html" target="_blank"> <img class="img-concert" src="img/bitstat_report_web.jpg" alt="데이터진단 보고서 - HTML 포맷" width="600" height="417"/> </a></p>
 <h2 id="도움말-및-튜토리얼-지원">도움말 및 튜토리얼 지원</h2>
 <p>rmarkdown 기반의 도움말과 튜토리얼은 사용자가 데이터 분석을 쉽게 수행할 수 있도록 가이드를 제공합니다.</p>
 <h1 id="구조적-특징">구조적 특징</h1>
 <h2 id="r-shiny">R &amp; shiny</h2>
-<p>R 패키지로 개발되며, shiny 앱으로 UI/UX를 구현하였습니다.</p>
+<p>R 패키지로 개발되며, shiny 웹앱으로 UI/UX를 구현하였습니다.</p>
 <h3 id="r-패키지">R 패키지</h3>
 <p>R 패키지로 배포가 가능합니다.</p>
 <h3 id="shiny">shiny</h3>
-<p>shiny 앱을 구성합니다. 프로토타이핑의 Look &amp; Feal은 shinydashboard로 구현되었습니다.</p>
+<p>shiny 웹앱을 구성합니다. 현재는 프로토타이핑 버전으로 Look &amp; Feal은 shinydashboard로 구현되었습니다.</p>
 <h2 id="server-hosting-local-hosting">Server Hosting &amp; Local Hosting</h2>
 <h3 id="server">Server</h3>
 <p>BitStat는 데이터 분석 Server로서 클라우드 환경에 배포되어 데이터 분석을 지원합니다.</p>
@@ -2512,12 +2542,13 @@ Shiny Hands-on
 <h2 id="dlookr-alookr">dlookr &amp; alookr</h2>
 <p>BitStat는 dlookr, alookr 패키지의 기능을 최적화 하여 지원합니다.</p>
 <h3 id="dlookr">dlookr</h3>
-<p>dlookr 패키지는 데이터 진단, 탐색적 데이터 분석, 통계적 데이터 변환 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.</p>
+<p>dlookr 패키지는 <strong>데이터 진단</strong>, <strong>탐색적 데이터 분석</strong>, <strong>통계적 데이터 변환</strong> 기능을 UI/UX 기반과 보고서 기반으로 최적화 및 자동화 합니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/dlookr.png" width="10%" /></p>
 </div>
 <h3 id="alookr">alookr</h3>
-<p>alookr 패키지는 분석 데이터 분할, 이진 분류 모델 적합 및 모델 검증을 자동화하는 AutoML 기능을 지원합니다.</p>
+<p>alookr 패키지는 분석 데이터 분할, <strong>이진 분류 모델 적합 및 모델 검증</strong>을 자동화하는 <strong>AutoML 기능을 지원</strong>합니다.</p>
+<p>현재 alookr 패키지는 기능의 만들어지는 과정이기 때문에, BitStat 패키지와 병행해서 기능이 진보될 것입니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/alookr.png" width="10%" /></p>
 </div>

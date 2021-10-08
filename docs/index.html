@@ -87,27 +87,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>BitStat</title>
 
-  <meta property="description" itemprop="description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다."/>
+  <meta property="description" itemprop="description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 **디지털 전환에 기여**코자 합니다."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="BitStat"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다."/>
+  <meta property="og:description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 **디지털 전환에 기여**코자 합니다."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="BitStat"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="BitStat"/>
-  <meta property="twitter:description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다."/>
+  <meta property="twitter:description" content="오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 **디지털 전환에 기여**코자 합니다."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["BitStat"]},{"type":"character","attributes":{},"value":["오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다. \n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["BitStat"]},{"type":"character","attributes":{},"value":["오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 **디지털 전환에 기여**코자 합니다. \n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2405,7 +2434,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"BitStat","description":"오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다.","authors":[]}
+{"title":"BitStat","description":"오픈 통계 패키지인 **BitStat**는 디지털 시대에 필수 역량이 되어 버린 **Data Literacy 역량 강화**를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 **디지털 전환에 기여**코자 합니다.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2451,17 +2481,19 @@ Shiny Hands-on
 <h1>BitStat</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>오픈 통계 패키지인 <strong>BitStat</strong>는 디지털 시대에 필수 역량이 되어 버린 <strong>Data Literacy 역량 강화</strong>를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 디지털 전환에 기여코자 합니다.</p></p>
+<p><p>오픈 통계 패키지인 <strong>BitStat</strong>는 디지털 시대에 필수 역량이 되어 버린 <strong>Data Literacy 역량 강화</strong>를 위한 목적으로 개발되며, 공유 문화 기반으로 개인과 기업의 <strong>디지털 전환에 기여</strong>코자 합니다.</p></p>
 </div>
 
 
 <div class="d-article">
-<h1 id="bitstat-앱">BitStat 앱</h1>
+<h1 id="bitstat-웹앱">BitStat 웹앱</h1>
+<p>BitStat는 <strong>R/Shiny</strong>로 구현되고 있는 <strong>웹앱</strong>(Web Application)입니다.</p>
 <p><img src="img/bitstat_bin.jpg" /></p>
 <h1 id="bitstat-패키지">BitStat 패키지</h1>
+<p>BitStat는 BitStat라는 이름의 <strong>R 패키지</strong>로 배포됩니다. 현재는 개발 버전입니다.</p>
 <p><img src="img/bitstat_desc.jpg" /></p>
 <p><br></p>
-<h1 id="bitstat-리파지토리">BitStat 리파지토리</h1>
+<h1 id="bitstat-소스-리파지토리">BitStat 소스 리파지토리</h1>
 <ul>
 <li>Github : <a href="https://github.com/bit2r/BitStat" target="_blank">https://github.com/bit2r/BitStat</a></li>
 </ul>

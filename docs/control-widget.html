@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2477,7 +2507,7 @@ Shiny Hands-on
 <h1 id="위젯을-아시나요">위젯을 아시나요?</h1>
 <p>“위젯(widget)은 컴퓨터 프로그래밍에서 위젯(widget) 또는 컨트롤(control)은 컴퓨터 사용자가 상호 작용하는 인터페이스 요소입니다.” - <a href="https://ko.wikipedia.org/wiki/GUI_위젯" class="uri">https://ko.wikipedia.org/wiki/GUI_위젯</a> 중에서</p>
 <h2 id="입력-위젯">입력 위젯</h2>
-<p>Shiny에서는 입력 위젯을 컨트롯 위젯(control widgets)이라 부릅니다. 즉, 위젯을 통해서 앱을 컨트롤하기 때문입니다. 굳이 입력 위젯이라고 불렀던 것은 입력된 값을 통해서 기능이 컨트록되고, 중요한 대부분 컨트롤 위젯의 이름의 접미사가 “Input”이기 때문입니다.</p>
+<p>Shiny에서는 입력 위젯을 컨트롯 위젯(control widgets)이라 부릅니다. 즉, 위젯을 통해서 앱을 컨트롤하기 때문입니다. 굳이 입력 위젯이라고 불렀던 것은 입력된 값을 통해서 기능이 컨트롤되고, 중요한 대부분 컨트롤 위젯 이름의 접미사가 “Input”이기 때문입니다.</p>
 <p>shiny 패키지의 입력 위젯은 버튼을 포함해서 다음과 같은 종류가 있습니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2593,7 +2623,7 @@ Shiny Hands-on
 <p>예제를 실행시켜 보고, 다양한 입력 위젯과 출력 위젯을 경험해 보세요.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span> <span class='op'>(</span><span class='st'>"07_widgets"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span><span class='op'>(</span><span class='st'>"07_widgets"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>

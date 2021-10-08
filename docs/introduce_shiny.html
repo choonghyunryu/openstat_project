@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2478,14 +2508,31 @@ Shiny Hands-on
 </ul>
 </nav>
 </div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="preface" style="margin-bottom: 40px;">
+<h3>들어가기</h3>
+본 핸즈온(튜토리얼)은
+<strong>컨트리뷰션 아카데미 멘티들의 OJT를 염두로</strong>
+작성되었습니다. 초심자 대상이기 때문에, Shiny의 ABC만   
+     다룹니다. 그 이상의 학습을 원하는 분들은
+<strong>Resouces</strong>
+페이지를 참고하십시요.
+<br/>
+학습 내용은
+<strong>Shiny in seven lessons</strong>
+(
+<a href="https://shiny.rstudio.com/tutorial/" target="_blank">https://shiny.rstudio.com/tutorial/</a>
+) 을 참조하여 작성하였습니다.
+</div>
+</div>
 <h1 id="shiny-아키텍처">Shiny 아키텍처</h1>
 <h2 id="ui와-server의-상호작용">UI와 Server의 상호작용</h2>
 <figure>
 <img src="img/interaction.png" alt="UI와 Server의 상호작용" /><figcaption aria-hidden="true">UI와 Server의 상호작용</figcaption>
 </figure>
 <ul>
-<li>UI : 사용자 인터페이스(User Interface) 영역으로 <strong>입력 위젯(input widget)을 통해 사용자가 의도하는 파라미터(인수)를 server에 전달</strong>한다.</li>
-<li>server : <strong>입력 위젯의 변화를 감지</strong>하여, 미리 정의된 작업을 수행한 후 그 <strong>결과를 출력 위젯(output widget)에 렌더링하여(rendering)</strong> 사용자에게 전달한다.</li>
+<li>UI : 사용자 인터페이스(User Interface) 영역으로 <strong>입력 위젯(input widget)을 통해 사용자가 의도하는 파라미터(인수)를 server에 전달</strong>합니다.</li>
+<li>server : <strong>입력 위젯의 변화를 감지</strong>하여, 미리 정의된 작업을 수행한 후 그 <strong>결과를 출력 위젯(output widget)에 렌더링하여(rendering)</strong> 사용자에게 전달합니다.</li>
 </ul>
 <h2 id="ui와-server의-상호작용-예시">UI와 server의 상호작용 예시</h2>
 <figure>
@@ -2498,36 +2545,36 @@ Shiny Hands-on
 </ul></li>
 <li>입력을 인지한 후, sliderInput 위젯과 연결된 renderPlot() 함수를 호출
 <ul>
-<li>위젯이 변경되면 변경된 위젯이 포함된 렌더링 함수가 자동 호출된다.</li>
+<li>위젯이 변경되면 변경된 위젯이 포함된 렌더링 함수가 자동 호출됩니다.</li>
 </ul></li>
 <li>renderPlot() 함수는 sliderInput 위젯 값만큼의 막대가 포함된 히스토그램을 그리고,
 <ul>
-<li>렌더링 함수가 실행된다.</li>
+<li>렌더링 함수가 실행됩니다.</li>
 </ul></li>
-<li>히스토그램은 출력 위젯(Output widget)인 plotOutput에 렌더링(그려짐)됨
+<li>히스토그램은 출력 위젯(Output widget)인 plotOutput에 렌더링(그려짐)됩니다.
 <ul>
-<li>출력 위젯에 렌더링된 결과가 반영된다.</li>
+<li>출력 위젯에 렌더링된 결과가 반영됩니다.</li>
 </ul></li>
 </ul>
 <h2 id="ui와-server의-상호작용-표준화">UI와 server의 상호작용 표준화</h2>
-<p>UI와 server의 상호작용을 shiny 스크립트 관점에서 표준화해 보자.</p>
+<p>UI와 server의 상호작용을 shiny 스크립트 관점에서 표준화해 봅니다.</p>
 <ol type="1">
-<li>위젯들은 개별 위젯을 인식하도록 아이디를 부여해야 한다.
+<li>위젯들은 개별 위젯을 인식하도록 아이디를 부여해야 합니다.
 <ul>
-<li>입력 위젯은 outputId,</li>
-<li>출력 위젯은 inputID</li>
+<li>입력 위젯은 inputId,</li>
+<li>출력 위젯은 outputId</li>
 </ul></li>
-<li>입력 위젯의 이름은 <strong>“기능명 + Input”</strong> 포맷으로 정의된다.
+<li>입력 위젯의 이름은 <strong>“기능명 + Input”</strong> 포맷으로 정의됩니다.
 <ul>
 <li>sliderInput = slider + <strong>Input</strong>,</li>
 <li>즉, 슬라이더로 사용자 <strong>입력</strong>을 받아서 서버로 전달하는 위젯</li>
 </ul></li>
-<li>출력 위젯의 이름은 <strong>“기능명 + Output”</strong> 포맷으로 정의된다.
+<li>출력 위젯의 이름은 <strong>“기능명 + Output”</strong> 포맷으로 정의됩니다.
 <ul>
 <li>plotOutput = plot + <strong>Output</strong>,</li>
 <li>즉, 시각화된 R 플롯을 <strong>출력</strong>하는 위젯</li>
 </ul></li>
-<li>렌더링 함수 이름은 <strong>“render + 기능명”</strong> 포맷으로 정의된다.
+<li>렌더링 함수 이름은 <strong>“render + 기능명”</strong> 포맷으로 정의됩니다.
 <ul>
 <li>renderPlot = <strong>render</strong> + Plot,</li>
 <li>즉, 플롯으로 렌더링하는(플롯을 그리는) 함수</li>
@@ -2586,7 +2633,7 @@ Shiny Hands-on
 <p>아키텍처를 이해하려는 목적으로 결과를 보고 프로그램도 살펴 보세요.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span> <span class='op'>(</span><span class='st'>"01_hello"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span><span class='op'>(</span><span class='st'>"01_hello"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>

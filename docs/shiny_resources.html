@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>

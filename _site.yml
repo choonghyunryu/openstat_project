@@ -23,10 +23,12 @@ navbar:
           href: reactivity.html           
         - text: "---"
         - text: "BitStat 개발하기"
-          href: shiny_resources.html
+          href: bitstat.html
         - text: "---"
         - text: "Resources"        
           href: shiny_resources.html
+    - text: "kodlookr 개발하기"
+      href: kodlookr.html
     - icon: fab fa-github
       href: https://github.com/bit2r/BitStat         
 output: 

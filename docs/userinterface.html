@@ -2189,11 +2189,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --bkgd-color:       var(--custom-blue);
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .preface {
+    font-size: 11pt;
+    background-color: var(--custom-lightblue);
+    margin-top: 2em;
+    margin-bottom: 0.5em;  
+    padding: 1.5em;
+    padding-top: 1em;
+    border-color: DodgerBlue;
+  }
 
   h1 {
     font-size: 30px !important;  
@@ -2227,9 +2237,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: bold;
   }
 
-  .distill-site-footer {
-    --bkgd-color: var(--custom-blue) !important;  
-  }  </style>
+  .bg-blue,
+  .bg-orange,
+  .bg-grey {
+    padding: 1.6em;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+  .bg-blue {
+    background-color: var(--custom-lightblue);
+  }
+  .bg-orange {
+    background-color: var(--custom-lightorange);
+  }
+  .bg-grey {
+    background-color: var(--custom-grey20);
+  }
+  .bg-blue > *:last-child,
+  .bg-orange > *:last-child,
+  .bg-grey > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2431,11 +2460,12 @@ Shiny Hands-on
 <a href="control-widget.html">위젯 추가하기</a>
 <a href="reactivity.html">반응 출력</a>
 <hr/>
-<a href="shiny_resources.html">BitStat 개발하기</a>
+<a href="bitstat.html">BitStat 개발하기</a>
 <hr/>
 <a href="shiny_resources.html">Resources</a>
 </div>
 </div>
+<a href="kodlookr.html">kodlookr 개발하기</a>
 <a href="https://github.com/bit2r/BitStat">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2507,7 +2537,7 @@ Shiny Hands-on
 <figure>
 <img src="img/shiny-page.png" alt="fluidPage로 정의한 UI" /><figcaption aria-hidden="true">fluidPage로 정의한 UI</figcaption>
 </figure>
-<p>그리고 shiny 패키지는 다음과 같은 페이지를 포함하고 있습니다.</p>
+<p>그리고 shiny 패키지는 다음과 같은 몇 개의 페이지 함수를 포함하고 있습니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://magrittr.tidyverse.org'>magrittr</a></span><span class='op'>)</span>
@@ -2542,7 +2572,7 @@ Shiny Hands-on
 </div>
 <p>현재 BitStat는 shinydashboard 패키지를 확장한 shinydashboardPlus 패키지의 dashboardPage로 페이지를 구성하고 있습니다.</p>
 <h2 id="레이아웃과-패널">레이아웃과 패널</h2>
-<p>페이지에 위젯을 보기 좋게 배치하기 위해서 Shiny는 레이아웃(Layout)과 패널(Panel)을 제공합니다. 레이아웃은 페이지를 가상으로 구획하는 구도이며, 패널은 위젯을 그룹핑하여 패치할 공간을 의미합니다.</p>
+<p>페이지에 위젯을 보기 좋게 배치하기 위해서 Shiny는 레이아웃(layout)과 패널(panel)을 제공합니다. 레이아웃은 페이지를 가상으로 구획하는 구도이며, 패널은 위젯을 그룹핑하여 패치할 공간을 의미합니다.</p>
 <blockquote>
 <p>화가는 캔버스를 가상으로 나누는 구도를 잡고 사물을 그리는 것처럼 Shiny는 레이아웃으로 구도를 잡고, 패널을 적당하게 배치한 후 패널 안에 비로소 위젯을 채워나갑니다. 즉, 레이아웃과 패널을 적당히 섞어서 앱의 모양(UI)을 정의합니다.</p>
 </blockquote>
@@ -2748,7 +2778,7 @@ titlePanel은 이름처럼 앱의 타이틀을 출력할 패널입니다.</p>
 <p>예제를 실행시켜 보고, tabsetPanel의 기능을 이해하세요. tabsetPanel은 탭 기능으로 여러 출력 위젯을 선택적으로 한 화면에 표현해 줍니다.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span> <span class='op'>(</span><span class='st'>"06_tabsets"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/runExample.html'>runExample</a></span><span class='op'>(</span><span class='st'>"06_tabsets"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>

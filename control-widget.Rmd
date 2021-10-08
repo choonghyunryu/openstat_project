@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 "위젯(widget)은 컴퓨터 프로그래밍에서 위젯(widget) 또는 컨트롤(control)은 컴퓨터 사용자가 상호 작용하는 인터페이스 요소입니다." - https://ko.wikipedia.org/wiki/GUI_위젯 중에서
 
 ## 입력 위젯
-Shiny에서는 입력 위젯을 컨트롯 위젯(control widgets)이라 부릅니다. 즉, 위젯을 통해서 앱을 컨트롤하기 때문입니다. 굳이 입력 위젯이라고 불렀던 것은 입력된 값을 통해서 기능이 컨트록되고, 중요한 대부분 컨트롤 위젯의 이름의 접미사가 "Input"이기 때문입니다.
+Shiny에서는 입력 위젯을 컨트롯 위젯(control widgets)이라 부릅니다. 즉, 위젯을 통해서 앱을 컨트롤하기 때문입니다. 굳이 입력 위젯이라고 불렀던 것은 입력된 값을 통해서 기능이 컨트롤되고, 중요한 대부분 컨트롤 위젯 이름의 접미사가 "Input"이기 때문입니다.
 
 shiny 패키지의 입력 위젯은 버튼을 포함해서 다음과 같은 종류가 있습니다.
 
@@ -132,7 +132,7 @@ Shiny 공식 tutorial 페이지를 살펴보고, 입력 위젯의 종류와 설�
 예제를 실행시켜 보고, 다양한 입력 위젯과 출력 위젯을 경험해 보세요.
 
 ```{r, eval=FALSE, echo=TRUE}
-shiny::runExample ("07_widgets")
+shiny::runExample("07_widgets")
 ```
 
 
